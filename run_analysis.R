@@ -11,4 +11,10 @@ run_analysis<-function(){
     ftest<-"UCI HAR Dataset/test/X_test.txt"
     df_test<-read.table(ftrain, nrows=maxrows)
     df_full<- rbind(df_test, df_train)
+    
+    #2.Extracts only the measurements on the mean and standard deviation for each measurement.
+    ##Make sure there are no field with meand and sd in each rows...
+    df_sum<-apply(df_full, 2, mean)
+    df_sum<-rbind(df_sum, apply(df_full, 2, sd))
+    row.names(df_sum)<-c("mean", "sd")
 }
