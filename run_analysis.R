@@ -22,4 +22,9 @@ run_analysis<-function(){
     #df_sum<-apply(df_full, 2, mean)
     #df_sum<-rbind(df_sum, apply(df_full, 2, sd))
     #row.names(df_sum)<-c("mean", "sd")
+    #
+    #To find column names with mean in it use df_names[grep("mean", df_names$feature),]
+    df_names[grep("Mean|mean|std", df_names$feature),]##Did not find other combitnations
+    vsummarynames<-grep("Mean|mean|std",colnames(df_full))
+    dfsummary<-df_full[,vsummarynames]
 }
