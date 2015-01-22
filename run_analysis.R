@@ -11,9 +11,14 @@ run_analysis<-function(maxrows=-1){
     
     ftrain<-"UCI HAR Dataset/train/X_train.txt"
     df_train<-read.table(ftrain, nrows=maxrows, col.names=as.vector(df_names$feature))
+    print(dim(df_train))
+    
     #Now the test data
     ftest<-"UCI HAR Dataset/test/X_test.txt"
-    df_test<-read.table(ftrain, nrows=maxrows, col.names=as.vector(df_names$feature))
+    df_test<-read.table(ftest, nrows=maxrows, col.names=as.vector(df_names$feature))
+    print(dim(df_test))
+    
+    #merge
     df_full<- rbind(df_test, df_train)
     
     #2.Extracts only the measurements on the mean and standard deviation for each measurement.
