@@ -33,4 +33,15 @@ run_analysis<-function(maxrows=-1){
     vsummarynames<-grep("Mean|mean|std",colnames(df_full))
     dfsummary<-df_full[,vsummarynames]
     print(dim(dfsummary))
+    
+    #3-4 Seems like the names are ok... for now
+    
+    #5. From the data set in step 4, creates a second, independent tidy data set 
+    #   with the average of each variable for each activity and each subject.
+    df_avg<-colMeans(dfsummary)
+    print(class(df_avg))
+    print(df_avg[1])
+    #print(names(df_avg))
+    print(df_avg["angle.Y.gravityMean."])
+    print(df_avg["angle.X.gravityMean."])
 }
