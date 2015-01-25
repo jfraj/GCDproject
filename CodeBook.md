@@ -1,5 +1,5 @@
 ##Introduction
-The run\_analysis.R code produce a file of average features for each subject and each activity of the given data set.
+The run\_analysis.R code produces a file of average features for each subject and each activity of the given data set ([described here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)).
 Here are the steps:
 * Getting and cleaning (removing "-", "(", ")", "." and ",") the feature names
 * Create a data frame with the train and test data set with column names cleaned above
@@ -13,6 +13,16 @@ Here are the steps:
 * Write the table in a text file named average.txt
 
 ##Variables
+The definitions are devided into text output variables (produced by the code run\_analysis.R) and the variables inside the code.
+
+
+###Output variables
+* activity: Performed while recording data with phone (WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING)
+* variable: From the phone's embedded accelerometer and gyroscope.  Comprise 3-axial linear acceleration and 3-axial angular velocity.  Only mean and standard deviation measurement names are included. For more information, see the features_info.txt in the UCI HAR Dataset directory.  The names have been modified to remove ("-", "(", ")", "." and ",").
+* subject: Id for the 30 volunteers within an age bracket of 19-48 years
+* average: Average to all the measurements for the given subject, activity and variable
+
+
 ###Code variables
 * ffeatures: path to the file containing the feature names
 * ftrain: path to the train data
@@ -38,10 +48,3 @@ A description of the variables in the output are in the file feature_info.txt
 * df\_activities: data from made by reading factivities
 * columns4tidy: columns names from dfsummary that will be used in the final data set
 * df_avg: data frame with average of the columns columns4tidy from dfsummary grouped by activity and subject
-
-
-###Text output variables
-* activity: Performed while recording data with phone (WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING)
-* variable:
-* subject:
-* average
