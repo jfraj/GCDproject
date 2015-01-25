@@ -13,7 +13,7 @@ Here are the steps:
 * Write the table in a text file named average.txt
 
 ##Variables
-###Data file names
+###Code variables
 * ffeatures: path to the file containing the feature names
 * ftrain: path to the train data
 * ftrain_labels: path to the activity labels for the train data
@@ -24,8 +24,6 @@ Here are the steps:
 * factivities: path the the activity name corresponding to the activity labels
 A description of the variables in the output are in the file feature_info.txt
 (note that the characters "-", "(", ")", "." and "," have been removed from the names)
-
-###Data
 * df_names: feature names
 * cnames: cleaned (removing "-", "(", ")", "." and ",") names for the feature
 * df_train: data from made by reading ftrain
@@ -40,3 +38,10 @@ A description of the variables in the output are in the file feature_info.txt
 * df\_activities: data from made by reading factivities
 * columns4tidy: columns names from dfsummary that will be used in the final data set
 * df_avg: data frame with average of the columns columns4tidy from dfsummary grouped by activity and subject
+
+
+###Text output variables
+* activity: Performed while recording data with phone (WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING)
+* variable:
+* subject:
+* average
