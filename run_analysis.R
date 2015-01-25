@@ -83,7 +83,7 @@ run_analysis<-function(maxrows=-1){
     
     ##Because there are so many variables, make tall and skinny
     df_avg<-melt(df_avg, id=c("activity", "subject"), measure.vars=columns4tidy)
-    df_avg<-rename(df_avg, c("value"="mean"))
+    df_avg<-rename(df_avg, c("value"="average"))
 
     ##Order to make it more readable
     df_avg[order(df_avg$activity, df_avg$variable, df_avg$subject),]
